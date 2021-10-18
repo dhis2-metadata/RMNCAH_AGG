@@ -1,9 +1,5 @@
 # RMNCAH Digital Data Package Aggregate System Design { #rmncah-aggregate-design }
 
-Last updated April 30, 2020
-DHIS2 Version compatibility: 2.30 - 2.34
-Demo: [https://who-demos.dhis2.org/demo](https://who-demos.dhis2.org/demo)
-
 ## Introduction
 
 This document describes the conceptual system design in DHIS2 for the Reproductive, Maternal, Newborn, Child and Adolescent Health (RMNCAH) configuration package for aggregate reporting. The package is designed to facilitate the capture and analysis of a core set of indicators through routine health management information systems (HMIS) as described in the [WHO Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/healthinfo/FacilityAnalysisGuidance_RMNCAH.pdf?ua=1) (last updated October 2019).
@@ -111,9 +107,21 @@ This section will present the main sections (tables) of the immunisation dataset
 
 * This section consists of a single data element with disaggregation by sex (Male/Female) and Age (10-14, 15-19). The total is summed automatically in data entry and can also be used in the analytics.
 
-### Data elements from other health area datasets
+### Data elements from other health areas
 
-The following data elements are included in the WHO demo configuration, but are excluded from the RMNCAH metadata package itself.
+The following data elements are included in RMNCAH dataset; however, these are generally captured through routine monthly facility datasets for other programmes/health areas such as Malaria and EPI (immunization). During implementation, it is recommended to map the following data elements to existing datasets in the HMIS for other programmes/health areas. If these data are already being captured in another source (e.g. DHIS2 data set), they should be removed from the RMNACH data set to reduce duplicate data capture and mitigate data quality errors. 
+
+| Data Element Name                                | Data Element UID | Related Dataset Name     | Related Data Set UID |
+| :----------------------------------------------- | :--------------- | :----------------------- | :------------------- |
+| EPI - TT 2 doses given                           | KKTW2h1CzRK      | Immunization             | jqSaKxtj8IA          |
+| HIV - ANC clients tested for HIV                 | DYpD9YKSmmb      | HIV Monthly              | XvcWsuHBsGA          |
+| HIV - ANC clients tested positive for HIV        | krrsaGDzb17      | HIV Monthly              | XvcWsuHBsGA          |
+| HIV - ANC clients with known HIV positive status | xCZ83jjG3pU      | HIV Monthly              | XvcWsuHBsGA          |
+| MAL - ACTs courses received by patients          | l7gcisIvTBN      | Malaria burden reduction | O34y2Kyxx6P          |
+| MAL - SP course received for IPTp (1st dose)     | vCwegNjEuxN      | Malaria burden reduction | O34y2Kyxx6P          |
+| MAL - SP course received for IPTp (3rd dose)     | SPhiBDEbG0o      | Malaria burden reduction | O34y2Kyxx6P          |
+| MAL - Total malaria cases (confirmed + presumed) | kRasaq1REFp      | Malaria burden reduction | O34y2Kyxx6P          |
+| TB - New and relapse TB cases by age and sex     | tr0lVojK425      | TB case notification     | OyutuMOPgkt          |
 
 ## Validation Rules
 
