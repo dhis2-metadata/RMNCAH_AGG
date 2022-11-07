@@ -1,4 +1,4 @@
-# RMNCAH Digital Data Package Aggregate System Design { #rmncah-aggregate-design }
+# RMNCAH Digital Data Package Aggregate System Design { #rmncah-agg-design }
 
 ## Introduction
 
