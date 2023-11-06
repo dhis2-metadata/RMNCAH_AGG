@@ -1,19 +1,23 @@
-# RMNCAH Digital Data Package Aggregate System Design { #rmncah-agg-design }
+# RMNCAH HMIS Module { #rmncah-agg-design }
 
 ## Introduction
 
-This document describes the conceptual system design in DHIS2 for the Reproductive, Maternal, Newborn, Child and Adolescent Health (RMNCAH) configuration package for aggregate reporting. The package is designed to facilitate the capture and analysis of a core set of indicators through routine health management information systems (HMIS) as described in the [WHO Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/healthinfo/FacilityAnalysisGuidance_RMNCAH.pdf?ua=1) (last updated October 2019).
+This document describes the conceptual system design for integrating Reproductive, Maternal, Newborn, Child and Adolescent Health (RMNCAH) indicators and dashboards into a national HMIS. The guidance and associated metadata facilitates routine facility reporting and analysis of a core set of indicators as described in the [WHO Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/publications/m/item/analysis-and-use-of-health-facility-data-guidance-for-rmncah-programme-managers) (last updated October 2019).
 
-The RMNCAH package includes two main components:
+The RMNCAH module includes two main components:
 
-1. Aggregate data reporting component (data set, data elements, category combinations for required disaggregation, etc).
-2. Dashboard component:  focusing on how the data collection part of the configuration has been designed in DHIS2 (i.e. data sets and data elements).
+1. Dashboards and indicators: Dashboards include WHO recommended data visualizations and analyses based on a core set of RMNCAH indicators. It is recommended to implement this module using the data analysis, use and interpretation guidance provided by WHO in the guidance document to maximize impact. 
+2. Aggregate data model for routine facility data: data sets, data elements, and category combinations for required disaggregation of core WHO indicators (including facility-based denominators). Data may be reported from facilities as part of a paper-based system; or the aggregate data model in DHIS2 may be used to receive data aggregated from DHIS2 Tracker or other individual-level electornic data collection tools on a routine basis for the purpose of analysis and decision-making at facility, district and national levels.
 
-This document is intended for use by DHIS2 implementers at country and regional level to be able to support implementation and localisation of the configuration package while adhering to the design principles set forth.
+This guidance document is intended for use by: 
+* Ministry of Health staff working on reproductive, maternal, newborn, child and adolescent health programme(s) at national and sub-national levels 
+* Staff of partner organizations involved with supporting RMNCAH programme(s), monitoring and evaluation, and/or health system strengthening for alignment on routine data standards for analyis;
+* Consultants and staff working at research institutes involved with the analysis of RMNCAH data and/or efforts to improve the quality of routine RMNCAH data from national DHIS2 systems
+* MOH HMIS units and DHIS2 implementers who support national HMIS and sub-national activities for using DHIS2 data 
 
 ## Overview
 
-The RMNCAH configuration package for aggregate reporting contains the following datasets for entering input data:
+The RMNCAH module contains the following datasets for aggregate data reporting:
 
 |Name|Periodicity|Purpose|
 |:--|:--|:--|
@@ -195,7 +199,8 @@ The RMNCAH outputs included in the aggregate package include:
 
 ### Dashboard
 
-Dashboard items (charts and pivot table) are aligned to the WHO [Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/healthinfo/FacilityAnalysisGuidance_RMNCAH.pdf?ua=1).
+Dashboard items (charts and pivot table) are aligned to the WHO [Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](![image](https://github.com/dhis2-metadata/RMNCAH_AGG/assets/21032705/38555918-5cb5-4d1b-bc3e-017fa8a0be42)
+).
 
 ### Indicators
 
@@ -207,7 +212,7 @@ All Core Facility Indicators included in the WHO [Analysis and Use of Health Fac
 
 The following indicator groups have been configured as part of the package:
 
-* RMNCAH: includes _all_ RMNCAH indicators configured for the package
+* RMNCAH: includes _all_ RMNCAH indicators 
 * RMNCAH - Childhood and Young Adolescence
 * RMNCAH - Maternal and Newborn Health: includes indicators related to ANC, delivery, stillbirth, etc.
 * RMNCAH - Mortality: includes indicators related to adolescent, child, neonatal, and maternal deaths
@@ -218,9 +223,9 @@ A detailed overview of these items, including their names and descriptions, can 
 
 ## References
 
-1. [WHO Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/healthinfo/FacilityAnalysisGuidance_RMNCAH.pdf?ua=1) (October 2019)
+1. [WHO Analysis and Use of Health Facility Data Guidance for RMNCAH Programme Managers](https://www.who.int/publications/m/item/analysis-and-use-of-health-facility-data-guidance-for-rmncah-programme-managers) (October 2019)
 2. WHO toolkit for analysis and use of health facility data, accessed at: [https://www.who.int/healthinfo/tools_data_analysis_routine_facility/en/](https://www.who.int/healthinfo/tools_data_analysis_routine_facility/en/)
 
 ## Acknowledgements
 
-The WHO RMNCAH digital data package for DHIS2 was designed in collaboration with the World Health Organisation, UNICEF, Norwegian Institute of Public Health and University of Oslo Health Information Systems Programme.
+The WHO RMNCAH module for DHIS2 was designed in collaboration with the World Health Organisation, UNICEF, Norwegian Institute of Public Health and HISP Centre at the University of Oslo.
